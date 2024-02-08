@@ -1,10 +1,12 @@
-# sparql-query-demo
+# Sparql Query Demo
 
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
 ## About
 Easy deploy a demo capable of executing your sparql queries to the desired target endpoint in a simple way.
+
+![](./media/usage_example.gif)
 
 ## Requirements 
 The required python packages are:
@@ -56,6 +58,7 @@ After that, you just need to run the application with the parameters you want. I
         --requirement_columname="Question" \
         --query_path="data/queries"
     ```
+    
 ### Argument list
 The parameters that exist and their purpose are as follows:
 #### General:
