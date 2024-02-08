@@ -1,12 +1,23 @@
 # Sparql Query Demo
 
-
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+## Table Of Contents
+- [About](#about)
+- [Requirements](#requirements)
+- [Before using](#before-using)
+- [Usage](#usage)
+  * [Python 3.11](#python-311)
+  * [Docker](#docker)
+  * [Argument list](#argument-list)
+    + [General:](#general-)
+    + [Queries-related:](#queries-related-)
+    + [Requirements-related:](#requirements-related-)
+- [License](#license)
 
 ## About
 Easy deploy a demo capable of executing your sparql queries to the desired target endpoint in a simple way.
 
 ![](./media/usage_example.gif)
+
 
 ## Requirements 
 The required python packages are:
