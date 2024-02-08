@@ -3,7 +3,7 @@ version:  '3.7'
 services:
   sparql-query-demo:
     container_name: sparql-query-demo
-    image: ibaiguillen/sparql-query-demo
+    image: ibaiguillen/sparql-query-demo:v1.0
     ports:
       - '9900:9900'
     volumes:
@@ -18,6 +18,5 @@ services:
       - "--identifier_columname=ID"
       - "--requirement_columname=Question"
       - "--query_path=queries"
-    build:
-      dockerfile: Dockerfile
+
     

@@ -58,7 +58,32 @@ After that, you just need to run the application with the parameters you want. I
         --requirement_columname="Question" \
         --query_path="data/queries"
     ```
-    
+
+### Docker
+The official image of this demo is posted on dockerhub [ibaiguillen/sparql-query-demo](https://hub.docker.com/r/ibaiguillen/sparql-query-demo). To run the example with docker you need the ```data``` folder as [explained before](#before-using). Remember that you can include more arguments or change them, see ([argument list for more options](#argument-list)).
+
+You can run the application with the following docker command:
+- ``` bash
+    docker run \
+    --name sparql-query-demo \
+    -p 9900:9900 \
+    -v $(pwd)/data:/sparql-query-demo/data \
+    ibaiguillen/sparql-query-demo:v1.0 \
+    --demo_title="Demo for wikidata queries" \
+    --endpoint="https://query.wikidata.org/sparql" \
+    --return_format=JSON \
+    --include_example=True \
+    --requirements_file=requirements.csv \
+    --requirements_separator=',' \
+    --identifier_columname=ID \
+    --requirement_columname=Question \
+    --query_path=queries
+    ```
+
+Or you can run docker compose to deploy it:
+- ```docker-compose up``` or ```docker compose up```
+
+
 ### Argument list
 The parameters that exist and their purpose are as follows:
 #### General:
