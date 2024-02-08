@@ -9,17 +9,17 @@ import argparse
 
 parser = argparse.ArgumentParser(description='Description of your program')
 
-parser.add_argument('-t','--demo_title', help='Title of the demo website.', required=True, type=str)
+parser.add_argument('-t','--demo_title', help='Title of the demo website.', required=False, type=str, default='Title of the demo website.')
 parser.add_argument('-e','--endpoint', help='Endpoint to which queries point.', required=True, type=str)
-parser.add_argument('-f','--return_format', help='Endpoint return format (JSON or CSV).', required=False, type=str, default="XML")
+parser.add_argument('-f','--return_format', help='Endpoint return format (JSON or CSV).', required=False, type=str, default="JSON")
 parser.add_argument('-p','--port', help='Port in which the demo will be available.', required=False, default=9900)
 
 parser.add_argument('-x','--include_example', help='Whether or not to include a test query.', required=False, default=True)
 
-parser.add_argument('-r','--requirements_file', help='Path to tabular file with identifier and requirements columns (ID | Req.).', required=True, type=str)
+parser.add_argument('-r','--requirements_file', help='Name of the tabular file with identifier and requirements columns (ID | Req.).', required=True, type=str)
 parser.add_argument('-s','--requirements_separator', help='Tabular file separator. By default ",".', required=False, default=',', type=str)
-parser.add_argument('-i','--identifier_columname', help='Name of the column of identifiers, the header.', required=True, type=str)
-parser.add_argument('-c','--requirement_columname', help='Name of the column of requirements, the header.', required=True, type=str)
+parser.add_argument('-i','--identifier_columname', help='Name of the column of identifiers, the header.', required=False, default='ID', type=str)
+parser.add_argument('-c','--requirement_columname', help='Name of the column of requirements, the header.', required=False, default='Question', type=str)
 parser.add_argument('-n','--requirements_encoding', help='Encoding of the requirements tabular file.', required=False, type=str, default='utf-8')
 parser.add_argument('-q','--query_path', help='Folder where all queries are located. Remember that the queries have to end in ".rd" and have the name of the identifier it corresponds to (e.g. "CQ7.rq").', required=True, type=str)
 
