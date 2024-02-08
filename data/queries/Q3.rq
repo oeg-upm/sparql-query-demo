@@ -1,0 +1,15 @@
+PREFIX schema: <http://schema.org/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+
+SELECT ?h ?hLabel ?cause ?causeLabel (YEAR(?date) AS ?year) WHERE {
+?h wdt:P39 wd:Q11696;
+   wdt:P509 ?cause;
+   wdt:P570 ?date
+SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+} ORDER BY ?year
