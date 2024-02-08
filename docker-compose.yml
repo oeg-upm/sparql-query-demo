@@ -1,0 +1,23 @@
+version:  '3.7'
+
+services:
+  sparql-query-demo:
+    container_name: sparql-query-demo
+    image: ibaiguillen/sparql-query-demo
+    ports:
+      - '9900:9900'
+    volumes:
+      - ./data:/sparql-query-demo/data
+    command:
+      - "--demo_title=Demo for wikidata queries"
+      - "--endpoint=https://query.wikidata.org/sparql"
+      - "--return_format=JSON"
+      - "--include_example=True"
+      - "--requirements_file=requirements.csv"
+      - "--requirements_separator=,"
+      - "--identifier_columname=ID"
+      - "--requirement_columname=Question"
+      - "--query_path=queries"
+    build:
+      dockerfile: Dockerfile
+    
