@@ -3,7 +3,7 @@ version:  '3.7'
 services:
   sparql-query-demo:
     container_name: sparql-query-demo
-    image: ibaiguillen/sparql-query-demo:v1.0
+    image: ibaiguillen/sparql-query-demo:v1.1
     ports:
       - '9900:9900'
     volumes:
