@@ -144,4 +144,8 @@ with gr.Blocks() as demo:
 
 # demo.launch(server_port=args.port)
 print(f"Using port {SD_PORT}", flush=True)
-demo.launch(server_port=SD_PORT, share=False, server_name="0.0.0.0")
+
+if "ROOT_PATH" in os.environ:
+    demo.launch(server_port=SD_PORT, share=False, server_name="0.0.0.0", root_path=os.environ['ROOT_PATH'])
+else:
+    demo.launch(server_port=SD_PORT, share=False, server_name="0.0.0.0")
