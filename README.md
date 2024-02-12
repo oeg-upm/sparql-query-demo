@@ -79,7 +79,7 @@ You can run the application with the following docker command:
     --name sparql-query-demo \
     -p 9900:9900 \
     -v $(pwd)/data:/sparql-query-demo/data \
-    ibaiguillen/sparql-query-demo:v1.0 \
+    ibaiguillen/sparql-query-demo:v1.1 \
     --demo_title="Demo for wikidata queries" \
     --endpoint="https://query.wikidata.org/sparql" \
     --return_format=JSON \
