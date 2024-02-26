@@ -11,6 +11,7 @@
     + [General:](#general-)
     + [Queries-related:](#queries-related-)
     + [Requirements-related:](#requirements-related-)
+- [Acknowledgement](#acknowledgement)
 - [License](#license)
 
 ## About
@@ -113,6 +114,9 @@ The parameters that exist and their purpose are as follows:
 - ```--requirements_separator```: Tabular file separator. Not mandatory, by default '```,```' (csv).
 - ```--identifier_columname```: Name of the column (header) of identifiers. Not mandatory, default '*ID*'.
 - ```--requirement_columname```: Name of the column (header) of requirements. Not mandatory, default '*Question*'.
+
+## Acknowledgement
+This work is supported by the Predoctoral Grant (PIPF-2022/COM-25947) of the Consejería de Educación, Ciencia y Universidades de la Comunidad de Madrid, Spain.
 
 ## License
 MIT License
